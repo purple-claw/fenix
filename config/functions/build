@@ -250,6 +250,7 @@ build_uboot_deb() {
 
 	rm -rf $pkgdir
 	mkdir -p $pkgdir/usr/lib/u-boot $pkgdir/DEBIAN
+	chmod 755 $pkgdir/DEBIAN
 
 	# Copy u-boot files
 	local uboot_files=$UBOOT_IMAGE_FILES

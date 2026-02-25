@@ -15,6 +15,7 @@ build_board_deb() {
 	local pkgdir="$BUILD_IMAGES/.tmp/${pkgname}_${VERSION}_${DISTRIB_ARCH}"
 	rm -rf $pkgdir
 	mkdir -p $pkgdir/DEBIAN
+	chmod 755 $pkgdir/DEBIAN
 
 	board_deb_dependencies=$(echo $PACKAGE_LIST_BOARD_DEPS)
 	board_deb_dependencies=${board_deb_dependencies// /,}

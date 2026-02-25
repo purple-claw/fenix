@@ -15,6 +15,7 @@ build_updater_deb() {
 	local pkgdir="$BUILD_IMAGES/.tmp/${pkgname}_${VERSION}_${DISTRIB_ARCH}"
 	rm -rf $pkgdir
 	mkdir -p $pkgdir/DEBIAN
+	chmod 755 $pkgdir/DEBIAN
 
 	if [ "$LINUX" != "mainline" ] && [ "$DISTRIBUTION" == "Ubuntu" ] && [ "$DISTRIB_RELEASE" == "bionic" ]; then
 		case $KHADAS_BOARD in

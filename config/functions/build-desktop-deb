@@ -17,6 +17,7 @@ build_desktop_deb() {
 	local pkgdir="$BUILD_IMAGES/.tmp/${pkgname}_${VERSION}_all"
 	rm -rf $pkgdir
 	mkdir -p $pkgdir/DEBIAN
+	chmod 755 $pkgdir/DEBIAN
 
 	info_msg "Build desktop deb..."
 
